@@ -1,0 +1,32 @@
+:root {
+    --white: #ffffff;
+    --Rich_Blue: #00171f;
+    --Prussian_Blue: #003459;
+    --Celadon_Blue: #007ea7;
+    --Carolina_Blue: #00A8e8;
+  }
+
+.messege-box{
+    margin-top: 20px;
+}
+
+.navbackground{
+    background-color: var(--Rich_Blue);
+}
+
+.buttoncolor{
+    background-color: var(--Prussian_Blue);
+}
+
+.textcolor{
+    color: var(--white);
+}
+
+.backgroundcolor{
+    background-color: var(--Celadon_Blue);
+}
+
+.leftalittle{
+    margin-right: 5px;
+}
+
