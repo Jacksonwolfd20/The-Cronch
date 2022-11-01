@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render('login', {
       users,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
@@ -35,12 +35,15 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   // If a session exists, redirect the request to the homepage
-  
-    
-    
-  
+ 
 
   res.render('signup');
 });
 
+router.get('/homepage', (req, res) => {
+  // If a session exists, redirect the request to the homepage
+ 
+
+  res.render('homepage');
+});
 module.exports = router;

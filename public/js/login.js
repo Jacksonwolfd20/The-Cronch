@@ -1,6 +1,8 @@
 const sign_in = document.querySelector("#sign_in")
 const sign_up = document.querySelector("#sign_up")
 
+const sign_upbtn = document.querySelector("#signupbtn")
+
 const loginFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
@@ -18,7 +20,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/login');
     } else {
       alert('Failed to log in');
     }
@@ -26,4 +28,6 @@ const loginFormHandler = async (event) => {
 };
 
 document.querySelector('.login-form')
-  .addEventListener(sign_in, loginFormHandler);
+  .addEventListener("submit", loginFormHandler);
+
+  sign_upbtn.addEventListener("click", function () {window.location.replace("/signup")});
